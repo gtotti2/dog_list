@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Dokdo|Indie+Flower|Josefin+Sans|Lato|Montserrat:400,700');
+:root {
+  --bg-dark: #ff8800;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-size: 12px;
+  background: var(--bg-dark);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+}
+
+.box__form {
+  width: 80%;
+  margin: 0 auto;
+}
+.box__form form {
+  display: flex;
+  flex-direction: column;
+}
+.box__form form > *{
+  padding:10px;
+  margin: 5px 0px;
+}
+.box__form select,.box__form option,.box__form optgroup,.box__form input,.box__form button{
+  font-size: 24px;
+}
+
+.box__form button{
+  background: #fff;
+  border: 0;
+}
+.box__form button:hover{
+  background: #ccc;
+  cursor: pointer;
+}
+
+.box__image{
+  text-align: center;
+}
+
+.box__image img{
+  max-width: 80%;
+}

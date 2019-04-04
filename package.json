@@ -1,0 +1,24 @@
+{
+  "name": "doglist",
+  "version": "1.0.0",
+  "description": "List dog breeds and show breed info after select options",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtotti2/dog_list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtotti2/dog_list/issues"
+  },
+  "homepage": "https://github.com/gtotti2/dog_list#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  }
+}
