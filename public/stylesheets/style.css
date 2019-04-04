@@ -70,21 +70,21 @@ body {
   bottom: 70px;
 }
 
-.box__image .image__name[data-color="color--333"]{
-  color: #333
+.box__image .image__name[data-color="color--green"]{
+  color: green;
 }
-.box__image .image__name[data-color="color--222"]{
-  color: #222
+.box__image .image__name[data-color="color--red"]{
+  color: red;
 
 }
-.box__image .image__name[data-color="color--111"]{
-  color: #111
+.box__image .image__name[data-color="color--blue"]{
+  color: blue;
 }
-.box__image .image__name[data-color="color--ccc"]{
-  color: #ccc
+.box__image .image__name[data-color="color--gray"]{
+  color: gray;
 }
-.box__image .image__name[data-color="color--ddd"]{
-  color: #ddd
+.box__image .image__name[data-color="color--black"]{
+  color: black;
 }
 
 .box__image .image__name[data-font="font--Arvo"]{
