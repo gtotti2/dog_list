@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 routes(app);
-
-var server = app.listen(8080, function () {
+var port = process.env.PORT || 8080;
+var server = app.listen(port, function () {
     console.log("app running on port.", server.address().port);
 });
