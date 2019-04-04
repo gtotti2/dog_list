@@ -9,33 +9,32 @@ var selectOnChange = {
     "nameOnChange": function (element,target) {
         
         addEventHandler(element, 'keyup', function () {
-            
-            if (this.value.length > 1) {
-                document.querySelector(target).innerHTML = this.value
-           }
+            document.querySelector(target).innerHTML = this.value
         });
     },
-    "colorOnChange": function (element) {
+    "colorOnChange": function (element,target) {
         addEventHandler(element, 'change', function () {
-            console.log(this.value)
+            let valueFormatted = this.value.replace('#','')
+            document.querySelector(target).setAttribute('data-color', `color--${valueFormatted}`)
         });
     },
-    "fontOnChange": function (element) {
+    "fontOnChange": function (element,target) {
         addEventHandler(element, 'change', function () {
-            console.log(this.value)
+            let valueFormatted = this.value.replace('+','')
+            document.querySelector(target).setAttribute('data-font', `font--${valueFormatted}`)
         });
     },
     "breedOnChange": function (element,target) {
         addEventHandler(element, 'change', function () {
             axios.get(`https://dog.ceo/api/breed/${this.value}/images/random`).then(function (response) {
                 var image = response.data.message
-                var imageLoaded = document.querySelector(target)
-                console.log(imageLoaded)
+                var imageLoaded = document.querySelector(`${target} .image__dog`)
+                
 
-                if(document.querySelector(target).hasChildNodes()){
+                if(imageLoaded){
                     document.querySelector(target).removeChild(imageLoaded)
                 }
-                document.querySelector(target).insertAdjacentHTML('beforeend', `<img src="${image}">`);
+                document.querySelector(target).insertAdjacentHTML('afterbegin', `<div class="image__dog"><img src="${image}"></div>`);
             })
         });
     }
